@@ -3,123 +3,134 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#54280f">
 <title>Najm Food | نجم فود</title>
+<meta name="description" content="راه‌های ارتباط با نجم‌فود در شبکه‌های اجتماعی">
 
 <style>
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;font-family:Tahoma,Arial,sans-serif}
-body{background:#351909;color:#fff}
-.hero{
- min-height:100vh;
- min-height:100svh;
- display:flex;
- align-items:center;
- justify-content:center;
- padding:22px 14px;
- background:
- linear-gradient(180deg,rgba(35,15,3,.15),rgba(35,15,3,.72)),
- url('najmfood-bg.jpg') center center/cover no-repeat;
+* {
+  box-sizing: border-box;
 }
-.content{width:min(100%,470px);text-align:center}
-.brand{
- font-family:Georgia,'Times New Roman',serif;
- font-size:clamp(46px,12vw,68px);
- font-weight:900;font-style:italic;
- line-height:.95;
- color:#fff0c9;
- text-shadow:2px 3px 0 #54280f,0 4px 18px #000;
- margin-bottom:16px;
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: #351909;
 }
-.tagline{
- font-size:clamp(17px,4.5vw,22px);
- font-weight:bold;line-height:1.9;
- text-shadow:0 2px 8px #351909;
- margin:12px 0 20px;
+
+body {
+  font-family: Tahoma, Arial, sans-serif;
 }
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.social{
- min-height:132px;
- display:flex;flex-direction:column;
- align-items:center;justify-content:center;gap:7px;
- border:2px solid #e8bb61;border-radius:25px;
- background:rgba(255,245,224,.91);
- color:#24160f;text-decoration:none;
- box-shadow:0 5px 18px #190b0870;
- -webkit-tap-highlight-color:transparent;
+
+.poster-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 0;
 }
-.social:active{transform:scale(.97)}
-.icon{
- width:60px;height:60px;border-radius:18px;
- display:grid;place-items:center;
- color:white;font-size:36px;font-weight:bold;
- font-family:Arial,sans-serif;
+
+.poster {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-.telegram .icon{background:#229ed9}
-.instagram .icon{background:linear-gradient(135deg,#6338d5,#e1306c,#ffb13b)}
-.eitaa .icon{background:#f36c21}
-.bale .icon{background:#10aa85}
-.name{font-size:17px;font-weight:bold}
-.handle{font-size:14px;direction:ltr;color:#65331c}
-.footer{margin-top:22px;font-weight:bold;font-size:16px;line-height:2;text-shadow:0 2px 8px #351909}
-.note{font-size:11px;line-height:1.8;margin-top:9px;color:#fff0d5}
-@media(max-height:720px){
- .hero{padding:12px}
- .brand{font-size:42px;margin-bottom:8px}
- .tagline{margin:7px 0 12px;font-size:16px}
- .social{min-height:105px}
- .icon{width:48px;height:48px;font-size:30px}
- .footer{margin-top:12px}
+
+.link {
+  position: absolute;
+  display: block;
+  border-radius: 7%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.link:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+/* محدوده کلیک کارت تلگرام */
+.telegram {
+  left: 14.5%;
+  top: 44.3%;
+  width: 34.5%;
+  height: 17.6%;
+}
+
+/* محدوده کلیک کارت اینستاگرام */
+.instagram {
+  left: 50.7%;
+  top: 44.3%;
+  width: 34.5%;
+  height: 17.6%;
+}
+
+/* محدوده کلیک کارت ایتا */
+.eitaa {
+  left: 14.5%;
+  top: 62.7%;
+  width: 34.5%;
+  height: 17.8%;
+}
+
+/* محدوده کلیک کارت بله */
+.bale {
+  left: 50.7%;
+  top: 62.7%;
+  width: 34.5%;
+  height: 17.8%;
+}
+
+@media (min-width: 601px) {
+  body {
+    padding: 18px 0;
+  }
+
+  .poster-wrap {
+    box-shadow: 0 12px 45px #0008;
+  }
 }
 </style>
 </head>
 
 <body>
-<main class="hero">
-<section class="content">
+<main class="poster-wrap" aria-label="نجم فود">
 
-<header class="brand">Najm Food</header>
+  <!-- تصویر اصلی طرح جدید -->
+  <img
+    class="poster"
+    src="najmfood-poster.png"
+    alt="نجم فود؛ عطر غذای خانگی"
+  >
 
-<div class="tagline">
-❤️ عطر غذای خانگی<br>
-طعمی که به یاد می‌مونه...
-</div>
+  <!-- تلگرام -->
+  <a
+    class="link telegram"
+    href="intent://resolve?domain=najmfood#Intent;scheme=tg;package=org.telegram.messenger;S.browser_fallback_url=https%3A%2F%2Ft.me%2Fnajmfood;end"
+    aria-label="تلگرام نجم فود"
+  ></a>
 
-<nav class="grid" aria-label="شبکه‌های اجتماعی">
+  <!-- اینستاگرام -->
+  <a
+    class="link instagram"
+    href="https://instagram.com/najmfood"
+    aria-label="اینستاگرام نجم فود"
+  ></a>
 
-<a class="social telegram"
- href="intent://resolve?domain=najmfood#Intent;scheme=tg;package=org.telegram.messenger;S.browser_fallback_url=https%3A%2F%2Ft.me%2Fnajmfood;end">
- <span class="icon">➤</span>
- <span class="name">تلگرام</span>
- <span class="handle">@najmfood</span>
-</a>
+  <!-- ایتا -->
+  <a
+    class="link eitaa"
+    href="intent://eitaa.com/najmfood#Intent;scheme=https;package=ir.eitaa.messenger;S.browser_fallback_url=https%3A%2F%2Feitaa.com%2Fnajmfood;end"
+    aria-label="ایتا نجم فود"
+  ></a>
 
-<a class="social instagram" href="https://instagram.com/najmfood">
- <span class="icon">◎</span>
- <span class="name">اینستاگرام</span>
- <span class="handle">@najmfood</span>
-</a>
+  <!-- بله -->
+  <a
+    class="link bale"
+    href="https://ble.ir/najmfood"
+    aria-label="بله نجم فود"
+  ></a>
 
-<a class="social eitaa"
- href="intent://eitaa.com/najmfood#Intent;scheme=https;package=ir.eitaa.messenger;S.browser_fallback_url=https%3A%2F%2Feitaa.com%2Fnajmfood;end">
- <span class="icon">e</span>
- <span class="name">ایتا</span>
- <span class="handle">@najmfood</span>
-</a>
-
-<a class="social bale" href="https://ble.ir/najmfood">
- <span class="icon">✓</span>
- <span class="name">بله</span>
- <span class="handle">@najmfood</span>
-</a>
-
-</nav>
-
-<div class="footer">🍽️ نجم‌فود؛ کارمون، عشقمونه! ❤️</div>
-<div class="note">برای باز شدن مستقیم برنامه‌ها، باید اپ مربوطه روی گوشی نصب باشد.</div>
-
-</section>
 </main>
 </body>
 </html>
