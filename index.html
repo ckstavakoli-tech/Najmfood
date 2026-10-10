@@ -1,68 +1,124 @@
+
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#54280f">
 <title>Najm Food | نجم فود</title>
+
 <style>
-:root{--brown:#54280f;--gold:#e8bb61;--cream:#fff0d5;--ink:#24160f}
 *{box-sizing:border-box}
-html{min-height:100%;background:#351909}
-body{margin:0;min-height:100vh;font-family:Tahoma,Arial,sans-serif;color:var(--ink)}
-.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:22px 14px;
-background:linear-gradient(180deg,rgba(45,20,4,.24),rgba(45,20,4,.40)),url('najmfood-bg.jpg') center center/cover no-repeat}
-.panel{width:min(100%,510px);padding:22px 17px 24px;border:2px solid #e5bd62;border-radius:32px;
-background:rgba(255,245,224,.93);box-shadow:0 15px 45px #1c0b0666;text-align:center;backdrop-filter:blur(3px)}
-.brand{position:relative;margin:0 auto 8px;max-width:100%}
-.chef{font-size:43px;line-height:1;filter:drop-shadow(0 2px 0 #eac56c)}
-.logo{font-family:Georgia,'Times New Roman',serif;font-weight:900;font-style:italic;font-size:clamp(43px,12vw,68px);
-line-height:.98;letter-spacing:-1.7px;color:#54270d;text-shadow:1px 2px 0 #eac56c}
-.tagline{font-size:clamp(15px,4.1vw,19px);font-weight:800;line-height:1.8;margin:10px 0 4px}
-.description{font-size:14px;line-height:1.9;color:#684020;margin:0 auto 18px;max-width:390px}
+html,body{margin:0;min-height:100%;font-family:Tahoma,Arial,sans-serif}
+body{background:#351909;color:#fff}
+.hero{
+ min-height:100vh;
+ min-height:100svh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ padding:22px 14px;
+ background:
+ linear-gradient(180deg,rgba(35,15,3,.15),rgba(35,15,3,.72)),
+ url('najmfood-bg.jpg') center center/cover no-repeat;
+}
+.content{width:min(100%,470px);text-align:center}
+.brand{
+ font-family:Georgia,'Times New Roman',serif;
+ font-size:clamp(46px,12vw,68px);
+ font-weight:900;font-style:italic;
+ line-height:.95;
+ color:#fff0c9;
+ text-shadow:2px 3px 0 #54280f,0 4px 18px #000;
+ margin-bottom:16px;
+}
+.tagline{
+ font-size:clamp(17px,4.5vw,22px);
+ font-weight:bold;line-height:1.9;
+ text-shadow:0 2px 8px #351909;
+ margin:12px 0 20px;
+}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.social{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:139px;padding:13px 5px;
-border:1px solid #edcf8a;border-radius:25px;background:rgba(255,250,239,.96);text-decoration:none;color:#17100b;
-box-shadow:0 5px 0 rgba(112,69,21,.13);-webkit-tap-highlight-color:transparent;transition:transform .12s ease}
+.social{
+ min-height:132px;
+ display:flex;flex-direction:column;
+ align-items:center;justify-content:center;gap:7px;
+ border:2px solid #e8bb61;border-radius:25px;
+ background:rgba(255,245,224,.91);
+ color:#24160f;text-decoration:none;
+ box-shadow:0 5px 18px #190b0870;
+ -webkit-tap-highlight-color:transparent;
+}
 .social:active{transform:scale(.97)}
-.icon{width:70px;height:70px;border-radius:20px;display:grid;place-items:center;color:#fff;font-family:Arial,sans-serif;font-size:43px;font-weight:800;line-height:1}
+.icon{
+ width:60px;height:60px;border-radius:18px;
+ display:grid;place-items:center;
+ color:white;font-size:36px;font-weight:bold;
+ font-family:Arial,sans-serif;
+}
 .telegram .icon{background:#229ed9}
-.instagram .icon{background:linear-gradient(135deg,#6c39d4 0%,#e1306c 58%,#ffb13b 100%)}
-.eitaa .icon{background:#f36c21;font-style:italic}
+.instagram .icon{background:linear-gradient(135deg,#6338d5,#e1306c,#ffb13b)}
+.eitaa .icon{background:#f36c21}
 .bale .icon{background:#10aa85}
-.name{font-size:17px;font-weight:800;margin-top:1px}
-.handle{font-size:14px;color:#65331c;direction:ltr;unicode-bidi:isolate}
-.footer{margin-top:21px;font-size:14px;font-weight:800;color:#6a351c;line-height:1.8}
-.note{margin-top:10px;font-size:11px;line-height:1.8;color:#81664a}
-@media(min-width:430px){.panel{padding:26px 20px 25px}.grid{gap:14px}.social{min-height:154px}.icon{width:76px;height:76px}}
-@media(max-height:720px){.hero{padding:10px}.panel{padding:16px 14px}.chef{font-size:32px}.logo{font-size:46px}.description{margin-bottom:12px}.social{min-height:115px}.icon{width:55px;height:55px;font-size:35px}.footer{margin-top:13px}}
+.name{font-size:17px;font-weight:bold}
+.handle{font-size:14px;direction:ltr;color:#65331c}
+.footer{margin-top:22px;font-weight:bold;font-size:16px;line-height:2;text-shadow:0 2px 8px #351909}
+.note{font-size:11px;line-height:1.8;margin-top:9px;color:#fff0d5}
+@media(max-height:720px){
+ .hero{padding:12px}
+ .brand{font-size:42px;margin-bottom:8px}
+ .tagline{margin:7px 0 12px;font-size:16px}
+ .social{min-height:105px}
+ .icon{width:48px;height:48px;font-size:30px}
+ .footer{margin-top:12px}
+}
 </style>
 </head>
+
 <body>
 <main class="hero">
-<section class="panel" aria-label="شبکه‌های اجتماعی نجم فود">
-<header class="brand">
-<div class="chef" aria-hidden="true">👨🏻‍🍳</div>
-<div class="logo">Najm<br>Food</div>
-</header>
-<div class="tagline">❤️ عطر غذای خانگی<br>طعمی که به یاد می‌مونه...</div>
-<p class="description">برای همراهی با نجم‌فود، شبکه اجتماعی دلخواهت رو انتخاب کن.</p>
+<section class="content">
+
+<header class="brand">Najm Food</header>
+
+<div class="tagline">
+❤️ عطر غذای خانگی<br>
+طعمی که به یاد می‌مونه...
+</div>
+
 <nav class="grid" aria-label="شبکه‌های اجتماعی">
-<a class="social telegram" href="https://t.me/najmfood">
-<span class="icon" aria-hidden="true">➤</span><span class="name">تلگرام</span><span class="handle">@najmfood</span>
+
+<a class="social telegram"
+ href="intent://resolve?domain=najmfood#Intent;scheme=tg;package=org.telegram.messenger;S.browser_fallback_url=https%3A%2F%2Ft.me%2Fnajmfood;end">
+ <span class="icon">➤</span>
+ <span class="name">تلگرام</span>
+ <span class="handle">@najmfood</span>
 </a>
+
 <a class="social instagram" href="https://instagram.com/najmfood">
-<span class="icon" aria-hidden="true">◎</span><span class="name">اینستاگرام</span><span class="handle">@najmfood</span>
+ <span class="icon">◎</span>
+ <span class="name">اینستاگرام</span>
+ <span class="handle">@najmfood</span>
 </a>
-<a class="social eitaa" href="https://eitaa.com/najmfood">
-<span class="icon" aria-hidden="true">e</span><span class="name">ایتا</span><span class="handle">@najmfood</span>
+
+<a class="social eitaa"
+ href="intent://eitaa.com/najmfood#Intent;scheme=https;package=ir.eitaa.messenger;S.browser_fallback_url=https%3A%2F%2Feitaa.com%2Fnajmfood;end">
+ <span class="icon">e</span>
+ <span class="name">ایتا</span>
+ <span class="handle">@najmfood</span>
 </a>
+
 <a class="social bale" href="https://ble.ir/najmfood">
-<span class="icon" aria-hidden="true">✓</span><span class="name">بله</span><span class="handle">@najmfood</span>
+ <span class="icon">✓</span>
+ <span class="name">بله</span>
+ <span class="handle">@najmfood</span>
 </a>
+
 </nav>
+
 <div class="footer">🍽️ نجم‌فود؛ کارمون، عشقمونه! ❤️</div>
 <div class="note">برای باز شدن مستقیم برنامه‌ها، باید اپ مربوطه روی گوشی نصب باشد.</div>
+
 </section>
 </main>
 </body>
