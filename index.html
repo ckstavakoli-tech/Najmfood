@@ -4,132 +4,164 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#54280f">
+<meta name="theme-color" content="#351909">
 <title>Najm Food | نجم فود</title>
-<meta name="description" content="راه‌های ارتباط با نجم‌فود در شبکه‌های اجتماعی">
+<meta name="description" content="شبکه‌های اجتماعی نجم فود">
 
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+
+html,body{
+  margin:0;
+  width:100%;
+  min-height:100%;
+  background:#351909;
+  font-family:Tahoma,Arial,sans-serif;
 }
 
-html, body {
-  margin: 0;
-  min-height: 100%;
-  background: #351909;
+body{overflow-x:hidden}
+
+.poster-wrap{
+  position:relative;
+  width:100%;
+  height:100vh;
+  height:100svh;
+  min-height:540px;
+  overflow:hidden;
+  margin:0 auto;
 }
 
-body {
-  font-family: Tahoma, Arial, sans-serif;
+.poster{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
 }
 
-.poster-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 0;
+/* محدوده کلیک کارت‌ها */
+.link{
+  position:absolute;
+  display:block;
+  border-radius:8%;
+  -webkit-tap-highlight-color:transparent;
+  z-index:2;
 }
 
-.poster {
-  display: block;
-  width: 100%;
-  height: auto;
+.link:focus-visible{
+  outline:3px solid white;
+  outline-offset:3px;
 }
 
-.link {
-  position: absolute;
-  display: block;
-  border-radius: 7%;
-  -webkit-tap-highlight-color: transparent;
+/* تلگرام */
+.telegram{
+  left:5%;
+  top:44.3%;
+  width:43.5%;
+  height:17.6%;
 }
 
-.link:focus-visible {
-  outline: 3px solid #fff;
-  outline-offset: 3px;
+/* اینستاگرام */
+.instagram{
+  left:50.8%;
+  top:44.3%;
+  width:43.5%;
+  height:17.6%;
 }
 
-/* محدوده کلیک کارت تلگرام */
-.telegram {
-  left: 14.5%;
-  top: 44.3%;
-  width: 34.5%;
-  height: 17.6%;
+/* ایتا */
+.eitaa{
+  left:5%;
+  top:62.7%;
+  width:43.5%;
+  height:17.8%;
 }
 
-/* محدوده کلیک کارت اینستاگرام */
-.instagram {
-  left: 50.7%;
-  top: 44.3%;
-  width: 34.5%;
-  height: 17.6%;
+/* بله */
+.bale{
+  left:50.8%;
+  top:62.7%;
+  width:43.5%;
+  height:17.8%;
 }
 
-/* محدوده کلیک کارت ایتا */
-.eitaa {
-  left: 14.5%;
-  top: 62.7%;
-  width: 34.5%;
-  height: 17.8%;
+/* پیام راهنما */
+.install-note{
+  position:absolute;
+  z-index:3;
+  top:81.2%;
+  left:5%;
+  width:90%;
+  padding:10px 12px;
+  border:1px solid rgba(255,220,155,.8);
+  border-radius:16px;
+  background:rgba(48,22,8,.78);
+  color:#fff4df;
+  text-align:center;
+  font-size:clamp(11px,2.8vw,14px);
+  font-weight:bold;
+  line-height:1.9;
+  text-shadow:0 1px 3px #321708;
+  box-shadow:0 4px 16px #0003;
+  backdrop-filter:blur(5px);
+  -webkit-backdrop-filter:blur(5px);
+  pointer-events:none;
 }
 
-/* محدوده کلیک کارت بله */
-.bale {
-  left: 50.7%;
-  top: 62.7%;
-  width: 34.5%;
-  height: 17.8%;
-}
-
-@media (min-width: 601px) {
-  body {
-    padding: 18px 0;
+@media(max-height:700px){
+  .install-note{
+    padding:6px 8px;
+    font-size:11px;
   }
+}
 
-  .poster-wrap {
-    box-shadow: 0 12px 45px #0008;
+@media(min-width:600px){
+  .poster-wrap{
+    max-width:600px;
+    box-shadow:0 0 35px #0008;
   }
 }
 </style>
 </head>
 
 <body>
-<main class="poster-wrap" aria-label="نجم فود">
+<main class="poster-wrap" aria-label="شبکه‌های اجتماعی نجم فود">
 
-  <!-- تصویر اصلی طرح جدید -->
   <img
     class="poster"
     src="najmfood-poster.png"
     alt="نجم فود؛ عطر غذای خانگی"
   >
 
-  <!-- تلگرام -->
   <a
     class="link telegram"
     href="intent://resolve?domain=najmfood#Intent;scheme=tg;package=org.telegram.messenger;S.browser_fallback_url=https%3A%2F%2Ft.me%2Fnajmfood;end"
-    aria-label="تلگرام نجم فود"
+    aria-label="ورود به تلگرام نجم فود"
   ></a>
 
-  <!-- اینستاگرام -->
   <a
     class="link instagram"
     href="https://instagram.com/najmfood"
-    aria-label="اینستاگرام نجم فود"
+    aria-label="ورود به اینستاگرام نجم فود"
   ></a>
 
-  <!-- ایتا -->
   <a
     class="link eitaa"
     href="intent://eitaa.com/najmfood#Intent;scheme=https;package=ir.eitaa.messenger;S.browser_fallback_url=https%3A%2F%2Feitaa.com%2Fnajmfood;end"
-    aria-label="ایتا نجم فود"
+    aria-label="ورود به ایتا نجم فود"
   ></a>
 
-  <!-- بله -->
   <a
     class="link bale"
     href="https://ble.ir/najmfood"
-    aria-label="بله نجم فود"
+    aria-label="ورود به بله نجم فود"
   ></a>
+
+  <div class="install-note">
+    ✨ برای ورود به هر شبکه اجتماعی، باید برنامه مربوطه بر روی گوشی نصب باشد.
+  </div>
 
 </main>
 </body>
